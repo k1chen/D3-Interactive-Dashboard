@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive Dashboard Documentation</title>
+    <link rel="stylesheet" type="text/css" href="about.css" />
+  </head>
+  <body>
+    <div class="centered-button">
+      <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+    <div class="card">
+      <h2>Instructions</h2>
+      <p>
+        Use your mouse to brush over the scatter plot to update the pie chart
+        and the stacked bar chart below it. By brushing the main chart, the data
+        from the selected families will update accordingly. Furthermore, use the
+        dropdown menu to view data from either 2021 or 2022.
+        <strong>Note:</strong> You may need to switch between the years a couple
+        times before the data actually updates, I wasn’t sure why this was the
+        case but I hope this is not that significant of an issue.
+      </p>
+    </div>
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        For the Interactive Dashboard using D3 visualization project, I chose to
+        re-explore the EdConnect Household Survey to investigate the
+        relationship between enrollment status in the district-wide EdConnect
+        broadband initiative program and the race of the households.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Process of Building Charts</h2>
+      <p>
+        The main chart, the scatterplot, is simply a visualization of every
+        single family that responded to the survey within a specific year
+        (either 2021 or 2022). It took a lot of time to figure out how I would
+        portray this data, as the X and Y axes were impossible to define given
+        that there were no numerical parameters for the families outside of
+        their ID. In order to map this, I created 2 new columns in the dataset
+        called “rowNum” and “colNum,” which essentially assigned a unique number
+        to each family within the dataset. This way, I could plot the families
+        based on these two identification numbers and the users would be able to
+        see every single family on a single chart and brush over them.
+      </p>
+      <p>
+        The stacked bar chart was inspired by my previous project, where I used
+        stacked bar charts to show the difference between BIPOC/All White family
+        selections for a different question. This time, the question was the
+        enrollment status of the family in the EdConnect broadband program, and
+        the stacked bars allowed for a visualization of the difference between
+        BIPOC and all White families’ enrollment statuses. Based on the user’s
+        brushing of the scatterplot, the bar chart would adapt to the
+        brushed-upon data points. Furthermore, the scale would adapt based on
+        how many families the user may have brushed over.
+      </p>
+      <p>
+        The pie chart represents the split between BIPOC and all-White families,
+        where it does the same function as the bar chart to adapt to the brushed
+        data points from the scatterplot depending on the user. Furthermore, if
+        the user hovers over either part of the pie chart, a tooltip will appear
+        that displays the count of either BIPOC or All White, depending on which
+        section is being hovered over.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Note</h2>
+      <p>
+        An interesting caveat, as I also pointed out in the last project, was
+        that there were some families in the dataset that didn’t have any data
+        for whether or not they were BIPOC or all-White. I wasn’t sure what to
+        do with this, but I noticed that the dashboard created by David Shen
+        that was in the instructions of the dataset seemed to have added these
+        unidentified families into the all-White total. I felt that his method
+        was a dishonest portrayal of the data since it skews in a certain
+        pattern that may not be true, so I just did not incorporate unidentified
+        families in the charts to preserve its integrity.
+      </p>
+    </div>
+  </body>
+</html>

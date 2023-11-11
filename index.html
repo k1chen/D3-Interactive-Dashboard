@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enrollment Status and BIPOC Distribution</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+  </head>
+  <body>
+    <h2>Household EdConnect Program Enrollment Status and BIPOC Distribution by Year</h2>
+    <button onclick="window.location.href='about.html'">About</button><br>
+    <label for="year-select">Choose a Year:</label>
+    <select id="year-select"></select>
+    <div id="tooltip" class="tooltip"></div>
+
+    <div id="charts-container">
+      <div id="scatterplot" ></div>
+      <div class="chart-row">
+        <div id="bar-chart" >
+        <label >What is the relationship between Enrollment Status and the race of household?</label></div>
+        <div id="pie-chart" >
+        <label> What are the household types being analyzed?</label></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
